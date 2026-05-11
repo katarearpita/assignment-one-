@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e8e8e8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  width: 1100px;
+  height: 600px;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+/* ── LEFT ── */
+.left {
+  width: 58%;
+  height: 100%;
+  background: #f9c000;
+  position: relative;
+  padding: 40px 50px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 140px;
+}
+
+/* Pokeball watermark */
+.pokeball {
+  position: absolute;
+  bottom: -60px;
+  left: -40px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 40px solid rgba(0,0,0,0.07);
+  pointer-events: none;
+}
+.pokeball::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  right: -40px;
+  height: 35px;
+  background: rgba(0,0,0,0.07);
+  transform: translateY(-50%);
+}
+.pokeball::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: rgba(0,0,0,0.07);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.content h4 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.content h1 {
+  font-size: 96px;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #1a1a1a;
+  max-width: 380px;
+  font-weight: 400;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.counter .line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background: #1a1a1a;
+}
+
+/* ── RIGHT ── */
+.right {
+  width: 42%;
+  height: 100%;
+  background: #fdf5dc;
+  position: relative;
+}
+
+/* Hamburger */
+.hamburger {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+/* Dots nav */
+.dots {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #c8b97a;
+}
+
+.dot.active {
+  background: #1a1a1a;
+}
+
+/* Pikachu */
+.pikachu {
+  position: absolute;
+  width: 560px;
+  top: 30px;
+  left: -200px;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
